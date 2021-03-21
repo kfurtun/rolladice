@@ -1,18 +1,28 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="index.css" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <div class="container">
-      <button class="roll" onclick="rollDice()" id="roll">Zar salla</button>
-      <div class="dices">
-        <img id="firstDice" />
-        <img id="secondDice" />
-      </div>
-    </div>
+<head>
+  <link rel="stylesheet" href="index.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="index.js"></script>
-  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7P1CR3BH7W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7P1CR3BH7W');
+  </script>
+</head>
+<body>
+  <div class="container">
+    <button class="roll" onclick="rollDice()" id="roll">Zar salla</button>
+    <div class="dices">
+      <img id="firstDice" />
+      <img id="secondDice" />
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
 </html>
