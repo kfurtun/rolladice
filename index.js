@@ -4,4 +4,6 @@ function rollDice() {
 
   document.getElementById("firstDice").className = "dice dice" + dice1Value;
   document.getElementById("secondDice").className = "dice dice" + dice2Value;
+
+  ga('send', 'event', 'dice', 'roll');
 }
