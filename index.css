@@ -1,0 +1,66 @@
+.dice {
+  width: 115px;
+  height: 120px;
+  background: url(./dice.png); 
+  border:0px;
+  outline:none;
+}
+
+
+
+.dice1 {
+  background-position-x: -55px;
+  background-position-y: -55px;
+  
+}
+
+.dice2 {
+  background-position-x: -167px;
+  background-position-y: -55px;
+}
+
+.dice3 {
+  background-position-x: -280px;
+  background-position-y: -55px;
+}
+
+.dice4 {
+  background-position-x: -392px;
+  background-position-y: -55px;
+}
+.dice5 {
+  background-position-x: -504px;
+  background-position-y: -55px;
+}
+
+.dice6 {
+  background-position-x: -616px;
+  background-position-y: -55px;
+}
+
+.roll {
+  background-color: #42a5f5;
+  height: 48px;
+  width: 250px;
+  font-size: large;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  cursor:pointer;
+}
+
+.container{
+  margin-top:150px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+ 
+}
+
+.dices{
+  padding:35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
