@@ -2,7 +2,6 @@ function LetsRoll() {
   let input = document.getElementById("input").value;
   const output = parseFloat(input);
   rolling(output);
-  hideContent();
 
   gtag("event", "roll");
 }
@@ -36,21 +35,40 @@ function hideContent() {
   document.getElementById("inputDiv").style.display = "none";
   document.getElementById("oneDice").style.display = "none";
   document.getElementById("twoDices").style.display = "none";
+
+  // let elements = document.getElementsByClassName('asa');
+  // for(let i =0; i<elements.length;i++){
+  //   elements[i].style.display='none'
+  // }
 }
 
 function rolling(output) {
-  for (let i = 0; i < output; i++) {
-    let dice1Value = Math.floor(Math.random() * 6) + 1;
-    const dice = document.createElement("div");
-    dice.className = "dice dice" + dice1Value;
-    dice.id = "dice";
-    document.getElementById("dices").appendChild(dice);
+  if (output > 5 || isNaN(output)) {
+    //window.location.href = "index.html";
+    // document.getElementById("container").style.display = "none";
+
+    const warning = document.createElement("div");
+    warning.className = "warning";
+    warning.id = "warning";
+    warning.innerText = "Wrong input";
+    document.body.appendChild(warning);
+
+    //return;
+  } else {
+    again();
+    for (let i = 0; i < output; i++) {
+      let dice1Value = Math.floor(Math.random() * 6) + 1;
+      const dice = document.createElement("div");
+      dice.className = "dice dice" + dice1Value;
+      dice.id = "dice";
+      document.getElementById("dices").appendChild(dice);
+    }
+
+    if (document.getElementById("warning")) {
+      document.getElementById("warning").style.display = "none";
+    }
+    hideContent();
   }
-  if (output > 5) {
-    window.location.href = "index.html";
-    document.getElementById("container").style.display = "none";
-  }
-  again();
 }
 
 function again() {

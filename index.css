@@ -148,3 +148,9 @@
     background-position-y: -36px;
   }
 }
+
+.warning {
+  text-align: center;
+  color: red;
+  font-size: large;
+}
