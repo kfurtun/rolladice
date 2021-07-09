@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="index.css" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<title>Rolling Dice</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7P1CR3BH7W"></script>
   <script>
@@ -15,12 +15,15 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <button class="roll" onclick="rollDice()" id="roll">Zar salla</button>
-    <div class="dices">
-      <img id="firstDice" />
-      <img id="secondDice" />
-    </div>
+  <h1 class="header" id="header">How many dices do you want to roll(Max 5)?</h1>
+  <div class="shortCuts">
+    <button class="oneDice" id="oneDice" onclick="oneDice()">Quick One Dice</button>
+  <button class="twoDices" id="twoDices" onclick="twoDices()">Quick Two Dices</button>
+  </div>
+  <div class="inputDiv" id="inputDiv"><input class="input" type="text" id="input">
+  <button class="enterInput" onclick="LetsRoll()" id="roll">Let's Roll</button></div>
+  <div class="container" id="container">
+  <div class="dices" id="dices"></div>
   </div>
 
   <script src="index.js"></script>
