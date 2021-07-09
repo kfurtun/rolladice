@@ -46,12 +46,13 @@ function rolling(output) {
   if (output > 5 || isNaN(output)) {
     //window.location.href = "index.html";
     // document.getElementById("container").style.display = "none";
-
-    const warning = document.createElement("div");
-    warning.className = "warning";
-    warning.id = "warning";
-    warning.innerText = "Wrong input";
-    document.body.appendChild(warning);
+    if (!document.getElementById("warning")) {
+      const warning = document.createElement("div");
+      warning.className = "warning";
+      warning.id = "warning";
+      warning.innerText = "Wrong input";
+      document.body.appendChild(warning);
+    }
 
     //return;
   } else {
