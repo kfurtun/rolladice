@@ -6,6 +6,11 @@ function LetsRoll() {
   gtag("event", "roll");
 }
 
+document.getElementById("input").onkeypress = function () {
+  LetsRoll();
+  document.getElementById("warning").style.display = "none";
+};
+
 function oneDice() {
   let dice1Value = Math.floor(Math.random() * 6) + 1;
   const dice = document.createElement("div");
